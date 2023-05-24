@@ -10,12 +10,12 @@ async function fetchPosts(){
     return posts;
 }
 
-/*async function fetchPost(id){
+async function fetchPost(id){
     const response = await fetch(fullPageURL + `/${id}`);
     const post = await response.json();
     
     return post;
-}*/
+}
 
 /*function renderPostHTML(post){
     const container = document.querySelector(".latest-posts");
@@ -70,6 +70,8 @@ async function fetchPosts(){
 
         var post = posts[i];
 
+        const id = post.id;
+
         postContainer.id = post.id;
     
         const title = document.createElement("h2");
@@ -88,11 +90,11 @@ async function fetchPosts(){
         content.innerText = post.content.rendered;
         postContainer.append(content);
     
-        /*const wrapper = document.createElement("a");
+        const wrapper = document.createElement("a");
         wrapper.classList.add("details-btn");
-        wrapper.href = `/details.html?id=${id}`;
-        wrapper.innerText = "post Info"; 
-        postContainer.append(wrapper);*/
+        wrapper.href = `/blog-specific.html?id=${id}`;
+        wrapper.innerText = "Read more"; 
+        postContainer.append(wrapper);
 
         container.append(postContainer);
     }
