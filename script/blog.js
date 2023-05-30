@@ -91,10 +91,9 @@ function renderPostsHTML(posts){
         const imgDiv = document.createElement("div");
         imgDiv.classList.add("img-div");
         for (let i = 0; i < post._links["wp:featuredmedia"].length; i++){
-        //const imgData = post.featured_media[i];
         const img = document.createElement("img");
         img.src = post.jetpack_featured_media_url;
-        //img.alt = imgData.jetpack_featured_media_url;
+        img.alt = post.jetpack_featured_media_url;
         
         imgDiv.append(img);
         postContainer.append(imgDiv);

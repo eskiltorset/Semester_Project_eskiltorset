@@ -1,7 +1,7 @@
 // CAROUSEL SLIDER
 
 var count = 0;
-var inc = 0;
+var i = 0;
 var margin = 0;
 var slider = document.getElementsByClassName("slider-width")[0];
 var itemDisplay = 0;
@@ -20,6 +20,7 @@ if (screen.width > 280 && screen.width < 700) {
 
 
 var items = document.getElementsByClassName("post");
+var nextBtn = document.getElementsByClassName("next");
 var itemleft = items.length % itemDisplay;
 var itemslide = Math.floor(items.length / itemDisplay) - 1;
 for (let i = 0; i < items.length; i++) {
@@ -27,13 +28,16 @@ for (let i = 0; i < items.length; i++) {
 }
 
 function next() {
-    if (inc !== itemslide + itemleft) {
-        if (inc == itemslide) {
-            inc = inc + itemleft;
+    if (i !== itemslide + itemleft) {
+        if (i == itemslide) {
+            i = i + itemleft;
             count = count - (screen.width / itemDisplay) * itemleft;
         }
+        if (i >= (items.length/3)-1){
+            nextBtn.style.visibility = "hidden";
+        }
         else {
-            inc++;
+            i++;
             count = count - screen.width;
         }
     }
@@ -41,17 +45,18 @@ function next() {
 }
 
 function prev() {
-    if (inc !== 0) {
-        if (inc == itemleft) {
-            inc = inc - itemleft;
+    if (i !== 0) {
+        if (i == itemleft) {
+            i = i - itemleft;
             count = count + (screen.width / itemDisplay) * itemleft;
         }
+        
         else {
-            inc--;
+            i--;
             count = count + screen.width;
         }
     }
-    console.log(inc)
+    console.log(i)
     slider.style.left = count + "px";
 }
 
