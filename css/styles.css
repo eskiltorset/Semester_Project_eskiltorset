@@ -239,11 +239,11 @@ main h1 {
 }
 
 .prev {
-    margin-left: -50px;
+    margin-left: -110px;
 }
 
 .next {
-    margin-left: 50px;
+    margin-left: 110px;
 }
 
 footer {
@@ -298,3 +298,127 @@ footer p {
     margin: 3%;
     text-align: left;
 }
+
+.about-div {
+    width: 80%;
+    background-color: white;
+    margin: auto;
+}
+
+.about-content {
+    color: black;
+    padding: 5%;
+}
+
+/* CONTACT */
+form {
+    margin-top: 3%;
+    padding: 1em;
+    background: white;
+    width: 50%;
+    margin-left: 25%;
+}
+  
+.form {
+  display: none;
+}
+  
+.inside-form {
+  padding: 40px;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    background: #e9eff6;
+    line-height: 40px;
+    border-width: 0;
+    background-color: rgb(224, 224, 224);
+}
+
+.form-button {
+    margin-top: 30px;
+    background: rgb(10, 10, 10);
+    color: white;
+    font-size: 20px;
+    width: 100%;
+}
+
+.inside-form h3 {
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+  
+input {
+    margin-top: 2px;
+    padding: 10px;
+    font-size: 14px;
+}
+  
+button {
+    border: none;
+    width: 200px;
+    padding: 1rem;
+    color: var(--primary-colour);
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    opacity: 0.5;
+}
+  
+button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+  
+button:enabled {
+    opacity: 1;
+    cursor: pointer;
+}
+  
+label {
+    display: block;
+    margin-top: 1rem;
+    color: black;
+    font-size: 20px;
+}
+  
+.form-error {
+    display: none;
+    color: red;
+    font-size: 14px;
+}
+  
+.message {
+    background-color: rgb(32, 122, 32);
+    color: white;
+    padding: 1em;
+    border-radius: 0.2rem;
+    display: none;
+    text-align: center;
+    font-size: 16px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid darkred;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-left: 50%;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }

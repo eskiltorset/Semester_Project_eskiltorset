@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    background-color: black;
+  }
+
+  .index-body {
+    background-color: black;
+  }
+  
+  nav {
+    display: flex; /* 1 */
+    justify-content: space-between; /* 2 */
+    padding: 1.5rem 2rem; /* 3 */
+    background: black; /* 4 */
+    color: white;
+    box-shadow: 0px 3px 5px -3px #ccc;
+  }
+  
+  nav ul {
+    display: flex; /* 5 */
+    list-style: none; /* 6 */
+    margin-top: 5px;
+  }
+  
+  nav li {
+    padding-left: 1rem; /* 7! */
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding-left: 20px;
+  }
+
+main h1 {
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.latest-posts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.post {
+    text-align: center;
+    border: 3px solid black;
+    background-color: #ebebeb;
+    height: 400px;
+    width: 46.5%;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 20px;
+    margin-top: 0px;
+}
+
+.post h2 {
+    padding: 10px;
+}
+
+.img-div {
+    position: relative;
+    max-width: 100%;
+    height: 40%;
+}
+
+.img-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 10px;
+    max-height: 130px;
+    text-align: left;
+}
+
+.post p:after{
+    content:'...';
+}
+
+.details-btn {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.show-more {
+    position: relative;
+    left: 46%;
+    right: 46%;
+    padding: 10px;
+    text-transform: uppercase;
+}

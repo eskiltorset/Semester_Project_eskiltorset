@@ -3,7 +3,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
+<link href="css/blog.css" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,14 +11,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CryptoBlog | Blog Posts</title>
 
-    <script src="script/script.js" defer type="module"></script>
+    
+    <script src="script/blog.js" defer type="module"></script>
 </head>
 <body>
     <header>
         <nav>
             <a href="index.html"><h2>CryptoBlog</h2></a>
             <ul>
-              <li><a href="blog-specific.html">Blogs</a></li>
+              <li><a href="blog.html">Blogs</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -28,6 +29,12 @@
     <main>
         <h1>Blog Posts</h1>
         <div class="latest-posts"></div>
+        <button class="show-more" id="show_more">Show more</button>
     </main>  
+    <footer>
+        <h3>CryptoBlog</h3>
+        <p>This is a blog about the latest CryptoCurrency news and info.</p>
+        <p>Copyright &copy;2023</p>
+    </footer>
 </body>
 </html>
