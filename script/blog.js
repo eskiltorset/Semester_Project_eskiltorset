@@ -116,6 +116,20 @@ function renderPostsHTML(posts){
    }
 }
 
+const latestPosts = document.querySelector(".latest-posts");
+const loader = document.querySelector(".loader");
+const showMoreBtn = document.getElementById('show_more');
+
+loader.style.display = "block";
+latestPosts.style.display = "none";
+showMoreBtn.style.display = "none";
+
+setTimeout(() => {
+    latestPosts.style.display = "";
+    showMoreBtn.style.display = "";
+    loader.style.display = "none";
+}, 1500);
+
 async function main() {
     const posts = await fetchLimitedPosts();
     renderPostsHTML(posts);

@@ -16,6 +16,23 @@ async function fetchPost(id){
     
     return post;
 }
+
+const latestPosts = document.querySelector(".slider-container");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const loader = document.querySelector(".loader");
+
+loader.style.display = "block";
+latestPosts.style.display = "none";
+prevBtn.style.display = "none";
+nextBtn.style.display = "none";
+
+setTimeout(() => {
+    latestPosts.style.display = "block";
+    prevBtn.style.display = "block";
+    nextBtn.style.display = "block";
+    loader.style.display = "none";
+}, 1500);
  
  function renderPostsHTML(posts){
      for (let i = 0; i < posts.length; i++){

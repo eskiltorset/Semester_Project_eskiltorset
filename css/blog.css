@@ -108,3 +108,53 @@ main h1 {
     padding: 10px;
     text-transform: uppercase;
 }
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid rgb(167, 120, 18);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    margin-top: 5%;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+
+  footer {
+    left: 0;
+    bottom: 0;
+    margin-top: 6%;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(10, 10, 10);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+footer h3 {
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+footer p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}

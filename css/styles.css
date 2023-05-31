@@ -292,11 +292,13 @@ footer p {
     width: 100%;
     max-height: 300px;
     object-fit: cover;
+    
 }
 
 .contentmod p {
     margin: 3%;
     text-align: left;
+    padding-bottom: 30px;
 }
 
 .about-div {
@@ -406,11 +408,12 @@ label {
 
 .loader {
     border: 16px solid #f3f3f3;
-    border-top: 16px solid darkred;
+    border-top: 16px solid rgb(167, 120, 18);
     border-radius: 50%;
     width: 120px;
     height: 120px;
-    margin-left: 50%;
+    margin: auto;
+    margin-top: 5%;
     animation: spin 2s linear infinite;
   }
   

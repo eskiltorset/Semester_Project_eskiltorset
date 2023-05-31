@@ -23,7 +23,7 @@ form.style.display = "none";
 setTimeout(() => {
   form.style.display = "block";
   loader.style.display = "none";
-}, 1000);
+}, 1500);
 
 form.addEventListener("submit", validationSubmit);
 fullName.addEventListener("blur", validationForm);
