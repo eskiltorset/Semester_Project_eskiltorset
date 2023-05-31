@@ -28,13 +28,10 @@ for (let i = 0; i < items.length; i++) {
 }
 
 function next() {
-    if (i !== itemslide + itemleft) {
+    if (i !== (items.length/3)-1) {
         if (i == itemslide) {
             i = i + itemleft;
             count = count - (screen.width / itemDisplay) * itemleft;
-        }
-        if (i >= (items.length/3)-1){
-            nextBtn.style.visibility = "hidden";
         }
         else {
             i++;

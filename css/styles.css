@@ -199,7 +199,7 @@ main h1 {
 }
 
 .img-div img {
-    min-width: 100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -210,10 +210,6 @@ main h1 {
     margin: 10px;
     max-height: 130px;
     text-align: left;
-}
-
-.post p:after{
-    content:'...';
 }
 
 .details-btn {
