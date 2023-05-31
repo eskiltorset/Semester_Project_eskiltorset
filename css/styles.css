@@ -12,6 +12,12 @@
     background-color: black;
   }
 
+  h1 {
+    text-align: center;
+    padding: 20px;
+    color: white;
+  }
+
   .index-body {
     background-color: black;
   }
@@ -157,7 +163,7 @@ main h1 {
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
-    height: 400px;
+    height: 450px;
     width: 100%;
 }
 .slider-width{
@@ -175,14 +181,14 @@ main h1 {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 400px;
+    height: 450px;
 }
 
 .post {
     text-align: center;
     border: 3px solid black;
     background-color: #ebebeb;
-    height: 400px;
+    height: 450px;
     min-width: 31.8%;
     align-items: center;
     margin: 0 10px;
@@ -421,3 +427,36 @@ label {
         transform: rotate(360deg);
     }
   }
+
+
+/* MEDIA */
+  @media screen and (max-width: 700px) {
+
+    .latest-posts, .slider-container {
+        height: 500px;
+    }
+
+    .contentmod {
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+  }
+
+  @media screen and (max-width: 1100px) {
+
+    .latest-posts, .slider-container {
+        height: 500px;
+    }
+
+    .prev, .next {
+        margin-top: -20px;
+    }
+
+    .contentmod {
+        width: 80%;
+    }
+
+  }
+
+ 

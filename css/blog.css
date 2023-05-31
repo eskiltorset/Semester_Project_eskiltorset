@@ -158,3 +158,27 @@ footer p {
     font-size: 14px;
     color: #cacdd2;
 }
+
+@media screen and (max-width: 1150px) {
+
+    .post {
+        width: 45%;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .post {
+        width: 44%;
+    }
+
+}
+
+@media screen and (max-width: 670px) {
+
+    .post {
+        width: 100%;
+    }
+
+}
