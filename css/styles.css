@@ -408,6 +408,10 @@ label {
     font-size: 16px;
 }
 
+#hamburger-menu, #sidebar-menu, #hamburger-input {
+    display: none;
+  }
+
 .loader {
     border: 16px solid #f3f3f3;
     border-top: 16px solid rgb(167, 120, 18);
@@ -455,6 +459,90 @@ label {
 
     .contentmod {
         width: 80%;
+    }
+
+  }
+
+  @media screen and (max-width: 550px) {
+
+    #hamburger-menu {
+        position: relative;
+        visibility: visible;
+        width: 40px;
+        height: 30px;
+        top: -70px;
+        float: right;
+        right: 20px;
+        display: block;
+        border: none;
+        background: linear-gradient(
+          to bottom, 
+          white, white 20%, 
+          black 20%, black 40%, 
+          white 40%, white 60%, 
+          black 60%, black 80%, 
+          white 80%, white 100%
+        );
+      }
+    
+      #hamburger-menu #sidebar-menu {
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        margin-left: 60%;
+        width: 40%;
+        height: 30%;
+        float: right;
+        transition: 0.3s;
+        background-color: rgb(10, 10, 10);
+      }
+
+      #sidebar-menu ul {
+        display: block;
+        text-align: center;
+        margin-top: 0px;
+        margin-left: -25px;
+      }
+  
+      #sidebar-menu ul li {
+        list-style: none;
+        color: black;
+        margin-top: 10%;
+        font-size: 2.4rem;
+      }
+  
+      #sidebar-menu img {
+        top: 10%;
+        margin-bottom: 10%;
+      }
+  
+      #hamburger-input:checked + #hamburger-menu #sidebar-menu {
+        visibility: visible;
+        display: inline-block;
+        left: 0;
+        z-index: 5;
+      }
+  
+      #hamburger-input:checked ~ .overlay{
+        visibility: visible;
+        opacity: 0.4;
+      }
+
+      .header-right {
+        visibility: hidden;
+      }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    form {
+       width: 100%;
+       margin: 0;
+    }
+
+    .about-div {
+        width: 100%;
     }
 
   }
