@@ -1,7 +1,7 @@
 import { getPost, renderSinglePostHTML } from "./constant.js";
 
 const apiBase = "https://www.eskiltorset.no";
-const postsBase = "/wp-json/wp/v2/posts";
+const postsBase = "/wp-json/wp/v2/posts?_embed";
 
 const fullPageURL = apiBase + postsBase;
 
@@ -23,9 +23,9 @@ const contentMod = document.querySelector(".contentmod");
 const loader = document.querySelector(".loader");
 
 loader.style.display = "block";
-contentMod.style.display = "none";
+/*contentMod.style.display = "none";*/
 
 setTimeout(() => {
-    contentMod.style.display = "block";
+    /*contentMod.style.display = "block";*/
     loader.style.display = "none";
 }, 1500);

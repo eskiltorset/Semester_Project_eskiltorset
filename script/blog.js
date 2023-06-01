@@ -1,10 +1,10 @@
 const apiBase = "https://www.eskiltorset.no";
-const postsBase = "/wp-json/wp/v2/posts";
+const postsBase = "/wp-json/wp/v2/posts?_embed";
 
 const fullPageURL = apiBase + postsBase;
 
 async function fetchLimitedPosts(){
-    const response = await fetch(fullPageURL + `?per_page=12`);
+    const response = await fetch(fullPageURL);
     const posts = await response.json();
     console.log(posts);
     return posts;
@@ -37,7 +37,7 @@ function renderPostsHTML(posts){
        for (let i = 0; i < post._links["wp:featuredmedia"].length; i++){
        //const imgData = post.featured_media[i];
        const img = document.createElement("img");
-       img.src = post.jetpack_featured_media_url;
+       img.src = post._embedded['wp:featuredmedia']['0'].source_url;
        //img.alt = imgData.jetpack_featured_media_url;
        
        imgDiv.append(img);
@@ -92,8 +92,8 @@ function renderPostsHTML(posts){
         imgDiv.classList.add("img-div");
         for (let i = 0; i < post._links["wp:featuredmedia"].length; i++){
         const img = document.createElement("img");
-        img.src = post.jetpack_featured_media_url;
-        img.alt = post.jetpack_featured_media_url;
+        img.src = post._embedded['wp:featuredmedia']['0'].source_url;
+        img.alt = post._embedded['wp:featuredmedia']['0'].source_url;
         
         imgDiv.append(img);
         postContainer.append(imgDiv);

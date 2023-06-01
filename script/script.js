@@ -1,5 +1,5 @@
 const apiBase = "https://www.eskiltorset.no";
-const postsBase = "/wp-json/wp/v2/posts";
+const postsBase = "/wp-json/wp/v2/posts?_embed";
 
 const fullPageURL = apiBase + postsBase;
 
@@ -62,8 +62,8 @@ setTimeout(() => {
         for (let i = 0; i < post._links["wp:featuredmedia"].length; i++){
         const img = document.createElement("img");
         /*img.src = post.jetpack_featured_media_url;*/
-        img.src = post._links["wp:featuredmedia"][0].href;
-        img.alt = post._links["wp:featuredmedia"][0].href;
+        img.src = post._embedded['wp:featuredmedia']['0'].source_url;
+        img.alt = post._embedded['wp:featuredmedia']['0'].source_url;
         
         imgDiv.append(img);
         postContainer.append(imgDiv);

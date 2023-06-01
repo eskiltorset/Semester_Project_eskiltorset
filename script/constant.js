@@ -4,13 +4,16 @@ const postsBase = "/wp-json/wp/v2/posts";
 const fullPageURL = apiBase + postsBase;
 
 async function getPost(id){
-    const response = await fetch(fullPageURL + `/${id}`);
+    const response = await fetch(fullPageURL + `/${id}?_embed`);
     const post = await response.json();
+    console.log(post);
     return post;
+    
 }
 
 function renderSinglePostHTML(post) {
     const id = post.id;
+    
     const wrapper = document.createElement("div");
     wrapper.classList.add("contentmod");
     
@@ -19,7 +22,6 @@ function renderSinglePostHTML(post) {
     const heading = document.createElement("h2");
     const body = document.createElement("p");
     const image = document.createElement("img");
-
  
     wrapper.href = `blog-specific.html?id=${id}`;
     heading.innerText = post.title.rendered;
@@ -29,7 +31,7 @@ function renderSinglePostHTML(post) {
     label.htmlFor = input.id;
     document.title = "CryptoBlog | " + post.title.rendered;
 
-    const imgData = post.jetpack_featured_media_url;
+    const imgData = post._embedded['wp:featuredmedia']['0'].source_url;
     image.src = imgData;
     image.alt = imgData;
     
