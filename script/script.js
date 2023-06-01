@@ -61,8 +61,9 @@ setTimeout(() => {
         imgDiv.classList.add("img-div");
         for (let i = 0; i < post._links["wp:featuredmedia"].length; i++){
         const img = document.createElement("img");
-        img.src = post.jetpack_featured_media_url;
-        img.alt = post.jetpack_featured_media_url;
+        /*img.src = post.jetpack_featured_media_url;*/
+        img.src = post._links["wp:featuredmedia"][0].href;
+        img.alt = post._links["wp:featuredmedia"][0].href;
         
         imgDiv.append(img);
         postContainer.append(imgDiv);
