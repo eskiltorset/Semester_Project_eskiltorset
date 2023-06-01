@@ -1,5 +1,5 @@
 const apiBase = "https://www.eskiltorset.no";
-const postsBase = "/wp-json/wp/v2/posts?per_page=12";
+const postsBase = "/wp-json/wp/v2/posts";
 
 const fullPageURL = apiBase + postsBase;
 
