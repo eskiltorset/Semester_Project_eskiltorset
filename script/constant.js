@@ -23,7 +23,7 @@ function renderSinglePostHTML(post) {
     const body = document.createElement("p");
     const image = document.createElement("img");
  
-    wrapper.href = `Semester_Project_eskiltorset/blog-specific.html?id=${id}`;
+    wrapper.href = `blog-specific.html?id=${id}`;
     heading.innerText = post.title.rendered;
     body.innerText = post.content.rendered;
     input.type = "checkbox";

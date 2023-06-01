@@ -77,7 +77,7 @@ setTimeout(() => {
 
         const wrapper = document.createElement("a");
         wrapper.classList.add("details-btn");
-        wrapper.href = `/blog-specific.html?id=${id}`;
+        wrapper.href = `/Semester_Project_eskiltorset/blog-specific.html?id=${id}`;
         wrapper.innerText = "Read more >>>"; 
         postContainer.append(wrapper);
 
