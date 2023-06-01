@@ -72,7 +72,7 @@ function validationSubmit(event) {
   }
 
   // EMAIL
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue))/*(emailValue.indexOf(".") && emailValue.indexOf("@"))*/ {
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
     emailError.style.display = "block";
     submitButton.disabled = true;
   } 

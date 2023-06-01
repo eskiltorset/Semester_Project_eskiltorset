@@ -37,7 +37,7 @@ setTimeout(() => {
  function renderPostsHTML(posts){
      for (let i = 0; i < posts.length; i++){
         const post = posts[i];
-        //renderPostHTML(post);
+        
      }
 
     const container = document.querySelector(".latest-posts");
@@ -61,7 +61,7 @@ setTimeout(() => {
         imgDiv.classList.add("img-div");
         for (let i = 0; i < post._links["wp:featuredmedia"].length; i++){
         const img = document.createElement("img");
-        /*img.src = post.jetpack_featured_media_url;*/
+        
         img.src = post._embedded['wp:featuredmedia']['0'].source_url;
         img.alt = post._embedded['wp:featuredmedia']['0'].source_url;
         
