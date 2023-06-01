@@ -1,6 +1,6 @@
 import { getPost, renderSinglePostHTML } from "./constant.js";
 
-const apiBase = "https://eskiltorsetcom.local";
+const apiBase = "http://eskiltorsetcom.local";
 const postsBase = "/wp-json/wp/v2/posts";
 
 const fullPageURL = apiBase + postsBase;
@@ -19,13 +19,13 @@ async function renderPost(){
 
 renderPost();
 
-const latestPosts = document.querySelector(".contentmod");
+const contentMod = document.querySelector(".contentmod");
 const loader = document.querySelector(".loader");
 
 loader.style.display = "block";
-latestPosts.style.display = "none";
+contentMod.style.display = "none";
 
 setTimeout(() => {
-    latestPosts.style.display = "block";
+    contentMod.style.display = "block";
     loader.style.display = "none";
 }, 1500);

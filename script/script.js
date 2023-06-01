@@ -1,4 +1,4 @@
-const apiBase = "https://eskiltorsetcom.local";
+const apiBase = "http://eskiltorsetcom.local";
 const postsBase = "/wp-json/wp/v2/posts?per_page=12";
 
 const fullPageURL = apiBase + postsBase;
